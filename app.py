@@ -53,5 +53,7 @@ def print_pages():
         conn.close()
         return render_template('index.html', message="❌ رقم البطاقة غير موجود!", name=None, balance=None, card_number=None)
 
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=True)
+if _name_ == '_main_':
+    import os
+    port = int(os.environ.get("PORT", 8080))  # استخدام المنفذ المخصص من Railway
+    app.run(host="0.0.0.0", port=port, debug=True)
