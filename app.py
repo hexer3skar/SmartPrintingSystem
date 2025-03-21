@@ -54,4 +54,4 @@ def print_pages():
         return render_template('index.html', message="❌ رقم البطاقة غير موجود!", name=None, balance=None, card_number=None)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
